@@ -1,0 +1,220 @@
+#container {
+  position: relative;
+  z-index: 2;
+}
+
+.mobile-menu {
+  position: fixed;
+  right: 0px;
+  top: 60px;
+}
+
+.menu-open #container {
+  -webkit-transform: translate(-200px, 30px);
+          transform: translate(-200px, 30px);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  -webkit-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  text-align: center;
+  background-color: #ccbe00;
+  height: 100px;
+}
+
+header .sakuhitsuji > img {
+  height: 50px;
+  margin-top: 20px;
+}
+
+header .title {
+  margin-top: 30px;
+}
+
+header .title a {
+  font-size: 1.5rem;
+  color: white;
+}
+
+header .menu-icon {
+  background-color: transparent;
+  border: none;
+}
+
+header .menu-icon > span {
+  background-color: black;
+  display: block;
+  width: 35px;
+  height: 2px;
+  margin-bottom: 9px;
+}
+
+header .menu-icon > span :last-child {
+  margin-bottom: 0em;
+}
+
+.swiper-slide {
+  height: 400px;
+  overflow: hidden;
+}
+
+.swiper-slide .slide-message > p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  color: white;
+  font-size: large;
+  z-index: 2;
+  -webkit-transition: all 1.5s;
+  transition: all 1.5s;
+  opacity: 0;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+  -webkit-transition: -webkit-transform 1.9s ease;
+  transition: -webkit-transform 1.9s ease;
+  transition: transform 1.9s ease;
+  transition: transform 1.9s ease, -webkit-transform 1.9s ease;
+}
+
+.swiper-slide-active > img {
+  -webkit-transform: none;
+          transform: none;
+}
+
+.swiper-slide-active .slide-message > p {
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  opacity: 1.0;
+}
+
+.wide-menu {
+  display: none;
+}
+
+.mobile-menu__item {
+  list-style: none;
+}
+
+.mobile-menu__item > a {
+  margin-bottom: 50px;
+  display: block;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.mobile-menu__item > a:hover {
+  color: #ccbe00;
+}
+
+.mobile-menu__item > a > .subtitle {
+  font-weight: normal;
+}
+
+.mobile-menu__item > a > span {
+  display: block;
+  margin-right: 40px;
+}
+
+.mobile-menu__item a > .main-title {
+  font-size: large;
+}
+
+.article .top-news {
+  margin: 10px;
+  background-color: #f8f5cf;
+  max-width: 600px;
+  border: solid #ccbe00;
+}
+
+.article .top-news .title {
+  font-size: large;
+  color: red;
+  text-align: center;
+  width: 130px;
+  margin: 5px auto;
+}
+
+.article .top-news .message > strong {
+  color: red;
+}
+
+.article .invite {
+  margin: 10px;
+  background-color: #f8f5cf;
+  max-width: 600px;
+}
+
+@media (min-width: 480px) {
+  .mobile-menu {
+    display: none;
+  }
+  .menu-icon {
+    display: none;
+  }
+  .swiper-container {
+    padding: 0;
+  }
+  .wide-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0;
+    background-color: #ccbe00;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .wide-menu > li {
+    width: 125px;
+    display: inline-block;
+    list-style: none;
+    position: relative;
+  }
+  .wide-menu > li > ul {
+    list-style: none;
+    display: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+  }
+  .wide-menu > li > ul > li {
+    width: 135px;
+    font-weight: normal;
+    padding-left: 5px;
+  }
+  .wide-menu > li:hover > ul {
+    display: block;
+  }
+  .wide-menu a {
+    background-color: #ccbe00;
+    color: white;
+    line-height: 40px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+  }
+  .wide-menu a:hover {
+    background-color: #ffdddd;
+    color: #dd0000;
+  }
+}
+/*# sourceMappingURL=breakpoint.css.map */
